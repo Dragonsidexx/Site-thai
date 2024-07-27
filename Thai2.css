@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.Texto {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: black; /* Adicionando cor de texto para manter a legibilidade */
+}
+
+.Aqui {
+    color: rgb(206, 8, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.question-container {
+    margin: 20px;
+    padding: 10px;
+    color: red;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+button#Enviar,
+button#toggleVideo {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 9px #999;
+    margin-top: 20px;
+}
+
+button#Enviar:hover,
+button#toggleVideo:hover {
+    background-color: blue;
+}
+
+button#Enviar:active,
+button#toggleVideo:active {
+    background-color: greenyellow;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/* Esconde elementos com a classe hidden */
+.hidden {
+    display: none;
+}
+
+/* O container da resposta está oculto e fora da área visível */
+#responseContainer {
+    position: absolute;
+    top: -9999px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Adiciona margem acima e abaixo do vídeo */
+}
+
+.video-container video {
+    width: 700px; /* Define a largura do vídeo */
+    height: 500px; /* Define a altura do vídeo, igual à largura para torná-lo quadrado */
+    object-fit: cover; /* Cobre o conteúdo para garantir que o vídeo se ajuste ao contêiner */
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Voltar{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 9px #999;
+    margin-top: 20px;
+}
+.Voltar:hover{
+    background-color: blue;
+}
