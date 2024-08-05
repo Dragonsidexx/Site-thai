@@ -1,6 +1,6 @@
 window.onload = function() {
     let questionAnswered = false;
-    const redirectURL = 'DeclraThai.html';  // Define o URL de redirecionamento aqui
+    const redirectURL = 'Final.html';  // Define o URL de redirecionamento aqui
 
     function showModal(message) {
         const modal = document.getElementById('customAlert');
