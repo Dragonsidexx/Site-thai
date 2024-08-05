@@ -28,7 +28,7 @@ input[type="text"] {
     padding: 10px;
     margin: 10px 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid #ccc;
     border-radius: 4px;
 }
 
@@ -41,14 +41,14 @@ button#Enviar {
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #3e8e41;
+    background-color: #4CAF50;
     border: none;
     border-radius: 5px;
     box-shadow: 0 9px #999;
 }
 
 button#Enviar:hover {
-    background-color: blue;
+    background-color: #45a049;
 }
 
 button#Enviar:active {
@@ -57,57 +57,8 @@ button#Enviar:active {
     transform: translateY(4px);
 }
 
+/* O container da resposta está oculto e fora da área visível */
 #responseContainer {
     position: absolute;
     top: -9999px;
-}
-
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0; /* Adiciona margem acima e abaixo do vídeo */
-}
-
-.video-container video {
-    width: 700px; /* Define a largura do vídeo */
-    height: 500px; /* Define a altura do vídeo, igual à largura para torná-lo quadrado */
-    object-fit: cover; /* Cobre o conteúdo para garantir que o vídeo se ajuste ao contêiner */
-}
-
-#customAlert {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 300px;
-    text-align: center;
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
 }
