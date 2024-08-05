@@ -6,11 +6,19 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
-function enableLinks() {
-    var links = document.querySelectorAll('.sidenav a.disabled');
+function toggleLinks(enabled) {
+    var links = document.querySelectorAll('.sidenav a:not(.closebtn)');
     links.forEach(function(link) {
-        link.classList.remove('disabled');
-        link.classList.add('enabled');
-        link.onclick = function() { return true; }; // Permitir navegação
+        if (enabled) {
+            link.classList.remove('disabled');
+            link.onclick = function() { return true; }; // Permitir navegação
+        } else {
+            link.classList.add('disabled');
+            link.onclick = function() { return false; }; // Impedir navegação
+        }
     });
 }
+
+document.getElementById('toggleLinks').addEventListener('change', function() {
+    toggleLinks(this.checked);
+});
