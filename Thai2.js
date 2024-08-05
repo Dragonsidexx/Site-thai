@@ -8,6 +8,11 @@ window.onload = function() {
             alert('Olhe para o lado');
             document.getElementById('response').textContent = answer;
             document.getElementById('responseContainer').style.display = 'block';
+           window.location.href = 'DeclraThai.html';
+        } else {
+            alert('Por favor, responda a pergunta antes de sair.');
+        }
+    }
         } else {
             alert('Por favor, responda a pergunta antes de sair.');
         }
