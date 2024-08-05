@@ -5,7 +5,6 @@ window.onload = function() {
         const answer = document.getElementById('answer').value;
         if (answer.trim() !== '') {
             questionAnswered = true;
-            alert('Olhe para o lado');
             document.getElementById('response').textContent = answer;
             document.getElementById('responseContainer').style.display = 'block';
            window.location.href = 'DeclraThai.html';
