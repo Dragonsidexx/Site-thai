@@ -1,7 +1,7 @@
 window.onload = function() {
     let questionAnswered = false;
 
-    function showModal(message) dwdawdada{
+    function showModal(message) {
         const modal = document.getElementById('customAlert');
         const modalText = document.getElementById('modalText');
         modalText.textContent = message;
