@@ -43,7 +43,7 @@ window.onload = function() {
     document.getElementById('Enviar').onclick = function() {
         checkAnswer();
         if (questionAnswered) {
-            const redirectURL = '#'; // Substitua com a URL de redirecionamento desejada
+            const redirectURL = 'https://www.youtube.com/shorts/DyT6hx5g7mg'; // Substitua com a URL de redirecionamento desejada
             window.location.href = redirectURL;
         }
     }
