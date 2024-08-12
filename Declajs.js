@@ -4,18 +4,26 @@ window.onload = function() {
     function showModal(message) {
         const modal = document.getElementById('customAlert');
         const modalText = document.getElementById('modalText');
-        modalText.textContent = message;
-        modal.style.display = 'block';
+        if (modal && modalText) {
+            modalText.textContent = message;
+            modal.style.display = 'block';
+        } else {
+            console.error('Modal or modalText element not found.');
+        }
     }
 
     document.querySelector('.close-button').onclick = function() {
         const modal = document.getElementById('customAlert');
-        modal.style.display = 'none';
+        if (modal) {
+            modal.style.display = 'none';
+        } else {
+            console.error('Modal element not found.');
+        }
     }
 
     window.onclick = function(event) {
         const modal = document.getElementById('customAlert');
-        if (event.target === modal) {
+        if (modal && event.target === modal) {
             modal.style.display = 'none';
         }
     }
@@ -41,7 +49,12 @@ window.onload = function() {
         }
     }
 
-    document.getElementById('Enviar').onclick = function() {
-        checkAnswer();
+    const enviarButton = document.getElementById('Enviar');
+    if (enviarButton) {
+        enviarButton.onclick = function() {
+            checkAnswer();
+        };
+    } else {
+        console.error('Enviar button element not found.');
     }
 }
