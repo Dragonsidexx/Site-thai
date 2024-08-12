@@ -43,7 +43,7 @@ window.onload = function() {
     document.getElementById('Enviar').onclick = function() {
         checkAnswer();
         if (questionAnswered) {
-            window.location.href = redirectURL = 'Thai2.html';  // Define o URL de redirecionamento aqui
+            window.location.href = redirectURL = 'Ocomeço.html';  // Define o URL de redirecionamento aqui
         }
     }
 }
