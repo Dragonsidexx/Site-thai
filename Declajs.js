@@ -1,7 +1,6 @@
 window.onload = function() {
     let questionAnswered = false;
     let redirectURL = 'Thai2.html';  // Define o URL de redirecionamento aqui
-    let videoURL = 'https://www.youtube.com/shorts/DyT6hx5g7mg'; // URL do vídeo
 
     function showModal(message) {
         const modal = document.getElementById('customAlert');
@@ -44,7 +43,7 @@ window.onload = function() {
     document.getElementById('Enviar').onclick = function() {
         checkAnswer();
         if (questionAnswered) {
-            window.location.href = redirectURL;  // Redireciona para o URL definido
+            let videoURL = 'https://www.youtube.com/shorts/DyT6hx5g7mg'; // URL do vídeo
         }
     }
 
