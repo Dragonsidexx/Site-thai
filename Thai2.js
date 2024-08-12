@@ -6,7 +6,7 @@ window.onload = function() {
         const modal = document.getElementById('customAlert');
         const modalText = document.getElementById('modalText');
         modalText.textContent = message;
-        modal.style.display = 'block';
+        modal.style.display = 'flex'; // Use 'flex' para centralizar o modal
     }
 
     document.querySelector('.close-button').onclick = function() {
@@ -16,7 +16,7 @@ window.onload = function() {
 
     window.onclick = function(event) {
         const modal = document.getElementById('customAlert');
-        if (event.target === modal) {
+        if (modal && event.target === modal) {
             modal.style.display = 'none';
         }
     }
@@ -25,8 +25,12 @@ window.onload = function() {
         const answer = document.getElementById('answer').value;
         if (answer.trim() !== '') {
             questionAnswered = true;
-            document.getElementById('response').textContent = answer;
-            document.getElementById('responseContainer').style.display = 'block';
+            // Exibir a mensagem após responder a pergunta
+            showModal('Agora feche os olhos e conte até 15');
+            // Ocultar a resposta e o container de resposta
+            document.getElementById('response').textContent = '';
+            document.getElementById('responseContainer').style.display = 'none';
+            // Redirecionar após um atraso
             setTimeout(function() {
                 window.location.href = redirectURL;
             }, 2000);  // Ajuste o tempo conforme necessário
