@@ -1,6 +1,6 @@
 window.onload = function() {
     let questionAnswered = false;
-    let redirectURL = 'Thai2.html';  // Define o URL de redirecionamento aqui
+    let redirectURL = 'Ocomeço.html';  // Define o URL de redirecionamento aqui
 
     function showModal(message) {
         const modal = document.getElementById('customAlert');
