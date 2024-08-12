@@ -1,4 +1,7 @@
-  let questionAnswered = false;
+window.onload = function() {
+    let questionAnswered = false;
+    let redirectURL = 'Thai2.html';  // Define o URL de redirecionamento aqui
+    let videoURL = 'https://www.youtube.com/shorts/DyT6hx5g7mg'; // URL do vídeo
 
     function showModal(message) {
         const modal = document.getElementById('customAlert');
@@ -23,9 +26,8 @@
         const answer = document.getElementById('answer').value;
         if (answer.trim() !== '') {
             questionAnswered = true;
-            
-            // Exibir a mensagem após responder a pergunta
-            showModal('Fecha os olhos, conta até 15 e olhe para mim.');
+            document.getElementById('response').textContent = answer;
+            document.getElementById('responseContainer').style.display = 'block';
         } else {
             showModal('Por favor, responda a pergunta antes de sair.');
         }
@@ -42,8 +44,11 @@
     document.getElementById('Enviar').onclick = function() {
         checkAnswer();
         if (questionAnswered) {
-            const redirectURL = '#'; // Substitua com a URL de redirecionamento desejada
-            window.location.href = redirectURL;
+            window.location.href = redirectURL;  // Redireciona para o URL definido
         }
+    }
+
+    document.getElementById('showVideo').onclick = function() {
+        window.open(videoURL, '_blank'); // Abre o vídeo em uma nova aba
     }
 }
