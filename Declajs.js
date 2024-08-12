@@ -26,6 +26,8 @@ window.onload = function() {
             questionAnswered = true;
             document.getElementById('response').textContent = answer;
             document.getElementById('responseContainer').style.display = 'block';
+            // Exibir a mensagem após responder a pergunta
+            showModal('Agora feche os olhos e conte até 15');
         } else {
             showModal('Por favor, responda a pergunta antes de sair.');
         }
@@ -41,12 +43,5 @@ window.onload = function() {
 
     document.getElementById('Enviar').onclick = function() {
         checkAnswer();
-        if (questionAnswered) {
-            let videoURL = 'https://www.youtube.com/shorts/DyT6hx5g7mg'; // URL do vídeo
-        }
-    }
-
-    document.getElementById('showVideo').onclick = function() {
-        window.open(videoURL, '_blank'); // Abre o vídeo em uma nova aba
     }
 }
