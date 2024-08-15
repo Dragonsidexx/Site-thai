@@ -29,8 +29,6 @@ window.onload = function() {
         const answer = document.getElementById('answer').value;
         if (answer.trim() !== '') {
             questionAnswered = true;
-            // Exibir a mensagem após responder a pergunta
-            showModal('Agora feche os olhos e conte até 15');
             // Ocultar a resposta e o container de resposta
             document.getElementById('response').textContent = '';
             document.getElementById('responseContainer').style.display = 'none';
