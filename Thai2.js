@@ -34,7 +34,7 @@ window.onload = function() {
             document.getElementById('responseContainer').style.display = 'none';
             
             // Redirecionar após um atraso
-            setTimeout(redirectToFinalPage, 2000);
+            setTimeout(redirectToFinalPage, 50);
         } else {
             showModal('Por favor, responda a pergunta antes de sair.');
         }
