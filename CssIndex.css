@@ -103,6 +103,14 @@ body {
     bottom: 0;
 }
 
-.habilite{
+.habilite {
+    color: green;
+}
+
+.disabled {
+    color: red;
+}
+
+.enabled {
     color: green;
 }
