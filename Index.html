@@ -4,6 +4,14 @@
     <title>Espero que goste😄</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="CssIndex.css">
+    <style>
+        .disabled {
+            color: red;
+        }
+        .enabled {
+            color: green;
+        }
+    </style>
 </head>
 <body>
 <div id="mySidenav" class="sidenav">
@@ -14,13 +22,12 @@
         <br><li><a id="link3" href="Final.html" class="disabled" onclick="return false;">Coisas que eu precisava falar</a></li>    
     </div>
     <div class="habilite">
-        <p>Habilite os links:</p>
+        <p id="linkStatus" class="disabled">Links desabilitados</p>
         <label class="switch">
             <input type="checkbox" id="toggleLinks">
             <span class="slider"></span>
-          </label>
+        </label>
     </div>
-</div>
 </div>
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
