@@ -21,6 +21,10 @@ window.onload = function() {
         }
     }
 
+    function redirectToFinalPage() {
+        window.location.href = redirectURL;
+    }
+
     function checkAnswer() {
         const answer = document.getElementById('answer').value;
         if (answer.trim() !== '') {
@@ -31,9 +35,7 @@ window.onload = function() {
             document.getElementById('response').textContent = '';
             document.getElementById('responseContainer').style.display = 'none';
             // Redirecionar após um atraso
-            setTimeout(function() {
-                window.location.href = redirectURL;
-            }, 2000);  // Ajuste o tempo conforme necessário
+            setTimeout(redirectToFinalPage, 2000);  // Ajuste o tempo conforme necessário
         } else {
             showModal('Por favor, responda a pergunta antes de sair.');
         }
