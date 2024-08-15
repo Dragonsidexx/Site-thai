@@ -30,6 +30,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 9px #999;
     margin-top: 20px;
+    align-itens: left;
 }
 
 .Voltar:hover {
