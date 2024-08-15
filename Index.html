@@ -3,35 +3,27 @@
 <head>
     <title>Espero que goste😄</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="CssIndex.css">
-    <style>
-        .disabled {
-            color: red;
-        }
-        .enabled {
-            color: green;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div id="menu-links">
-        <br><li><a id="link1" href="Thai.html" class="disabled" onclick="return false;">Algumas palavras</a></li>
-        <br><li><a id="link2" href="Thai2.html" class="disabled" onclick="return false;">O começo</a></li>
-        <br><li><a id="link3" href="Final.html" class="disabled" onclick="return false;">Coisas que eu precisava falar</a></li>    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="menu-links">
+            <br><li><a id="link1" href="Thai.html" class="disabled" onclick="return false;">Algumas palavras</a></li>
+            <br><li><a id="link2" href="Thai2.html" class="disabled" onclick="return false;">O começo</a></li>
+            <br><li><a id="link3" href="Final.html" class="disabled" onclick="return false;">Coisas que eu precisava falar</a></li>
+        </div>
+        <div class="habilite">
+            <p id="linkStatus" class="disabled">Links desabilitados</p>
+            <label class="switch">
+                <input type="checkbox" id="toggleLinks">
+                <span class="slider"></span>
+            </label>
+        </div>
     </div>
-    <div class="habilite">
-        <p id="linkStatus" class="disabled">Links desabilitados</p>
-        <label class="switch">
-            <input type="checkbox" id="toggleLinks">
-            <span class="slider"></span>
-        </label>
-    </div>
-</div>
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-<script src="JsIndex.js"></script>
-<br>Esse vai ser um sitezinho para você, essa parte não vai estar elaborada, mas as outras partes vai estar, eu prometo (espero que realmente esteja).
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <script src="script.js"></script>
 </body>
 </html>
