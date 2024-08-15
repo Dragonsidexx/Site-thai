@@ -22,7 +22,7 @@ window.onload = function() {
     }
 
     function redirectToFinalPage() {
-        window.location.href = 'Final.html';
+        window.location.href = redirectURL;
     }
 
     function checkAnswer() {
