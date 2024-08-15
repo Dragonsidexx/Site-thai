@@ -22,7 +22,7 @@ window.onload = function() {
     }
 
     function redirectToFinalPage() {
-        window.location.href = redirectURL;
+        window.location.href = 'Final.html';
     }
 
     function checkAnswer() {
@@ -35,7 +35,7 @@ window.onload = function() {
             document.getElementById('response').textContent = '';
             document.getElementById('responseContainer').style.display = 'none';
             // Redirecionar após um atraso
-            setTimeout(redirectToFinalPage, 2000);  // Ajuste o tempo conforme necessário
+            setTimeout(redirectToFinalPage, 2000); 
         } else {
             showModal('Por favor, responda a pergunta antes de sair.');
         }
