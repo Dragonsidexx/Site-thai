@@ -24,7 +24,7 @@ function toggleLinks(enabled) {
     
     // Atualiza o status do parágrafo
     if (enabled) {
-        status.textContent = 'Links habilitados, se precisar do JavaScript';
+        status.textContent = 'Links habilitados';
         status.classList.remove('disabled');
         status.classList.add('enabled');
     } else {
