@@ -39,7 +39,7 @@ label {
 input {
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #333;
+    border: 1px solid red;
     border-radius: 4px;
     background-color: #333;
     color: #fff;
@@ -60,13 +60,19 @@ button:hover {
     background-color: #f40612;
 }
 
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+
 .footer {
     text-align: center;
     margin-top: 20px;
 }
 
 .footer a {
-    color: #e50914;
+    color: rgb(0, 4, 255);
     text-decoration: none;
 }
 
@@ -74,8 +80,3 @@ button:hover {
     text-decoration: underline;
 }
 
-/* styles.css */
-button:disabled {
-    background-color: #555;
-    cursor: not-allowed;
-}
