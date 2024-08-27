@@ -8,10 +8,14 @@
     <link rel="icon" href="netflix.jpeg">
 </head>
 <body>
+    <div class="language-switcher">
+        <button id="portuguese-btn">Português</button>
+        <button id="english-btn">English</button>
+    </div>
     <div class="background">
         <div class="login-container">
             <form class="login-form">
-                <h1>Login</h1>
+                <h1 id="login-title">Login</h1>
                 <div class="input-group">
                     <input type="email" id="username" placeholder="Email" required>
                 </div>
@@ -23,14 +27,14 @@
                 <div class="help-options">
                     <div class="remember-me">
                         <input type="checkbox" id="remember">
-                        <label for="remember">Lembre-se de mim</label>
+                        <label for="remember" id="remember-label">Lembre-se de mim</label>
                     </div>
                 </div>
                 <div class="signup-now">
-                    <span>Novo por aqui? <a href="register.html">Assine agora.</a></span>
+                    <span id="signup-text">Novo por aqui? <a href="register.html">Assine agora.</a></span>
                 </div>
                 <div class="captcha-info">
-                    <span>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.</span>
+                    <span id="captcha-text">Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.</span>
                 </div>
             </form>
         </div>
