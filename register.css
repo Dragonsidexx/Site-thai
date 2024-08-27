@@ -36,15 +36,20 @@ label {
     font-size: 14px;
 }
 
-input {
+.input-container {
+    position: relative;
     margin-bottom: 15px;
+}
+
+input {
     padding: 10px;
     border: 1px solid red; /* Borda vermelha por padrão */
     border-radius: 4px;
     background-color: #f8d7da; /* Fundo vermelho por padrão */
     color: #000; /* Cor do texto preto */
     font-size: 14px;
-    width: calc(100% - 30px); /* Ajuste para deixar espaço para o ícone */
+    width: 100%; /* Largura completa do contêiner */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
 input.valid {
@@ -57,6 +62,16 @@ input.invalid {
     border-color: red;
     background-color: #f8d7da; /* Fundo vermelho claro quando inválido */
     color: #000; /* Garante que o texto da entrada inválida permaneça preto */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+    font-size: 18px; /* Tamanho do ícone para melhor visualização */
 }
 
 button {
