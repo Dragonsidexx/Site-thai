@@ -41,8 +41,8 @@ input {
     padding: 10px;
     border: 1px solid red; /* Borda vermelha por padrão */
     border-radius: 4px;
-    background-color: #333;
-    color: #000; /* Define a cor do texto para preto */
+    background-color: #f8d7da; /* Fundo vermelho por padrão */
+    color: #000; /* Cor do texto preto */
     font-size: 14px;
     width: calc(100% - 30px); /* Ajuste para deixar espaço para o ícone */
 }
@@ -63,13 +63,13 @@ input {
 
 input.valid {
     border-color: green;
-    background-color: lightgreen;
+    background-color: #d4edda; /* Fundo verde claro quando válido */
     color: #000; /* Garante que o texto da entrada válida permaneça preto */
 }
 
 input.invalid {
     border-color: red;
-    background-color: #f8d7da;
+    background-color: #f8d7da; /* Fundo vermelho claro quando inválido */
     color: #000; /* Garante que o texto da entrada inválida permaneça preto */
 }
 
