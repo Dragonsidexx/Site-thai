@@ -1,3 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+.background {
+    background-image: url('fundo.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 60px 68px 40px;
+    border-radius: 8px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-form h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
 .input-group {
     position: relative;
     margin-bottom: 16px;
@@ -23,4 +61,73 @@
     right: 16px;
     cursor: pointer;
     color: #fff;
+}
+
+.login-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #e50914;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 24px;
+}
+
+.login-button:hover {
+    background-color: #f40612;
+}
+
+.help-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+.help-options a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.help-options a:hover {
+    text-decoration: underline;
+}
+
+.signup-now {
+    margin-top: 24px;
+    font-size: 16px;
+}
+
+.signup-now a {
+    color: blue;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.signup-now a:hover {
+    text-decoration: underline;
+}
+
+.captcha-info {
+    margin-top: 24px;
+    font-size: 13px;
+    color: #8c8c8c;
+}
+
+.captcha-info a {
+    color: #0071eb;
+    text-decoration: none;
+}
+
+.captcha-info a:hover {
+    text-decoration: underline;
 }
