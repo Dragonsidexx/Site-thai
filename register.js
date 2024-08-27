@@ -6,16 +6,39 @@ document.addEventListener('DOMContentLoaded', function() {
     const confirmPasswordInput = document.getElementById('confirm-password');
     const submitButton = form.querySelector('button');
 
+    function updateFieldStyles() {
+        // Atualiza o estilo de todos os campos de entrada
+        updateInputStyle(emailInput, validateEmail(emailInput.value));
+        updateInputStyle(passwordInput, passwordInput.value.trim() !== '');
+        updateInputStyle(confirmPasswordInput, confirmPasswordInput.value.trim() !== '');
+    }
+
+    function updateInputStyle(input, isValid) {
+        if (isValid) {
+            input.style.backgroundColor = 'lightgreen';
+        } else {
+            input.style.backgroundColor = '';
+        }
+    }
+
+    function validateEmail(email) {
+        // Verifica se o email contém @ e texto após o @
+        return email.includes('@') && email.split('@')[1].trim() !== '';
+    }
+
     function validateForm() {
         const email = emailInput.value.trim();
         const password = passwordInput.value.trim();
         const confirmPassword = confirmPasswordInput.value.trim();
 
         // Verifica se todos os campos estão preenchidos e se as senhas correspondem
-        const isFormValid = email !== '' && password !== '' && confirmPassword !== '' && password === confirmPassword;
+        const isFormValid = validateEmail(email) && password !== '' && confirmPassword !== '' && password === confirmPassword;
 
         // Habilita ou desabilita o botão de envio
         submitButton.disabled = !isFormValid;
+
+        // Atualiza o estilo dos campos
+        updateFieldStyles();
     }
 
     // Adiciona ouvintes de evento para validar o formulário
