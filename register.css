@@ -39,7 +39,7 @@ label {
 input {
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #333;
+    border: 1px solid red;
     border-radius: 4px;
     background-color: #333;
     color: #fff;
@@ -48,6 +48,7 @@ input {
 
 input.valid {
     background-color: lightgreen;
+    border-color: green;
 }
 
 input.invalid {
