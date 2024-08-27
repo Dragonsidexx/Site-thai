@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('register-form');
     const emailInput = document.getElementById('email');
@@ -9,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateFieldStyles() {
         // Atualiza o estilo de todos os campos de entrada
         updateInputStyle(emailInput, validateEmail(emailInput.value));
-        updateInputStyle(passwordInput, validatePassword(passwordInput.value));
-        updateInputStyle(confirmPasswordInput, validatePassword(confirmPasswordInput.value));
+        updateInputStyle(passwordInput, passwordInput.value.trim().length >= 8);
+        updateInputStyle(confirmPasswordInput, confirmPasswordInput.value.trim() === passwordInput.value.trim());
     }
 
     function updateInputStyle(input, isValid) {
@@ -28,11 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return email.includes('@') && email.split('@')[1].trim() !== '';
     }
 
-    function validatePassword(password) {
-        // Verifica se a senha tem pelo menos 8 caracteres
-        return password.length >= 8;
-    }
-
     function validateForm() {
         const email = emailInput.value.trim();
         const password = passwordInput.value.trim();
@@ -40,9 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Verifica se todos os campos estão preenchidos e se as senhas correspondem
         const isFormValid = validateEmail(email) &&
-                            validatePassword(password) &&
-                            validatePassword(confirmPassword) &&
-                            password === confirmPassword;
+            password.length >= 8 &&
+            confirmPassword === password;
 
         // Habilita ou desabilita o botão de envio
         submitButton.disabled = !isFormValid;
