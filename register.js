@@ -6,9 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitButton = form.querySelector('button');
 
     function updateFieldStyles() {
-        updateInputStyle(emailInput, validateEmail(emailInput.value));
-        updateInputStyle(passwordInput, passwordInput.value.trim().length >= 8);
-        updateInputStyle(confirmPasswordInput, confirmPasswordInput.value.trim() === passwordInput.value.trim());
+        const emailValid = validateEmail(emailInput.value);
+        const passwordValid = passwordInput.value.trim().length >= 8;
+        const confirmPasswordValid = confirmPasswordInput.value.trim() === passwordInput.value.trim();
+
+        updateInputStyle(emailInput, emailValid);
+        updateInputStyle(passwordInput, passwordValid);
+        updateInputStyle(confirmPasswordInput, confirmPasswordValid && passwordValid);
     }
 
     function updateInputStyle(input, isValid) {
