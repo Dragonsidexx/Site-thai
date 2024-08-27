@@ -39,7 +39,7 @@ label {
 input {
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid red;
+    border: 1px solid red; /* Borda vermelha por padrão */
     border-radius: 4px;
     background-color: #333;
     color: #fff;
@@ -47,13 +47,13 @@ input {
 }
 
 input.valid {
-    background-color: lightgreen;
-    border-color: green;
+    border-color: green; /* Muda a borda para verde quando válido */
+    background-color: lightgreen; /* Muda o fundo para verde claro quando válido */
 }
 
 input.invalid {
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
+    border-color: red; /* Garante que a borda seja vermelha quando inválido */
+    background-color: #f8d7da; /* Fundo rosa claro quando inválido */
 }
 
 button {
