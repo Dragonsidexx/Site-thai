@@ -15,9 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateInputStyle(input, isValid) {
         if (isValid) {
-            input.style.backgroundColor = 'lightgreen';
+            input.classList.add('valid');
+            input.classList.remove('invalid');
         } else {
-            input.style.backgroundColor = '';
+            input.classList.add('invalid');
+            input.classList.remove('valid');
         }
     }
 
