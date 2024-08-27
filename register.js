@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Adiciona funcionalidade ao ícone de olho
     document.querySelectorAll('.toggle-password').forEach(icon => {
         icon.addEventListener('click', () => {
+            console.log('Ícone de olho clicado');
             const inputId = icon.getAttribute('data-input-id');
             const input = document.getElementById(inputId);
             const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
