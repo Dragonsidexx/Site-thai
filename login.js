@@ -3,7 +3,6 @@ const form = document.querySelector('form');
 const usernameInput = document.querySelector('#username');
 const passwordInput = document.querySelector('#password');
 const togglePassword = document.querySelector('#togglePassword');
-const languageSwitcher = document.querySelector('.language-switcher');
 
 // Dados de tradução
 const translations = {
@@ -42,9 +41,21 @@ function applyTranslations(lang) {
     document.querySelector('#captcha-text').textContent = trans.captchaText;
 }
 
+// Função para definir o idioma no localStorage e recarregar a página
+function setLanguage(lang) {
+    localStorage.setItem('language', lang);
+    location.reload(); // Recarrega a página para aplicar o idioma escolhido
+}
+
+// Função para inicializar a página com o idioma armazenado
+function initializeLanguage() {
+    const savedLanguage = localStorage.getItem('language') || 'pt'; // Padrão para Português
+    applyTranslations(savedLanguage);
+}
+
 // Manipuladores de eventos para trocar de idioma
-document.querySelector('#portuguese-btn').addEventListener('click', () => applyTranslations('pt'));
-document.querySelector('#english-btn').addEventListener('click', () => applyTranslations('en'));
+document.querySelector('#portuguese-btn').addEventListener('click', () => setLanguage('pt'));
+document.querySelector('#english-btn').addEventListener('click', () => setLanguage('en'));
 
 // Função para validar credenciais
 function validateCredentials(username, password) {
@@ -78,5 +89,5 @@ togglePassword.addEventListener('click', () => {
     togglePassword.textContent = type === 'password' ? '👁️' : '🙈'; // Atualiza o ícone
 });
 
-// Aplicar traduções padrão
-applyTranslations('pt'); // Ou 'en', dependendo do idioma padrão
+// Inicializa a página com o idioma armazenado
+initializeLanguage();
