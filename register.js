@@ -1,3 +1,4 @@
+// register.js
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('register-form');
     const emailInput = document.getElementById('email');
@@ -26,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function validateEmail(email) {
-        // Verifica se o email contém @ e texto após o @
         return email.includes('@') && email.split('@')[1].trim() !== '';
     }
 
@@ -35,15 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = passwordInput.value.trim();
         const confirmPassword = confirmPasswordInput.value.trim();
 
-        // Verifica se todos os campos estão preenchidos e se as senhas correspondem
         const isFormValid = validateEmail(email) &&
             password.length >= 8 &&
             confirmPassword === password;
 
-        // Habilita ou desabilita o botão de envio
         submitButton.disabled = !isFormValid;
-
-        // Atualiza o estilo dos campos
         updateFieldStyles();
     }
 
@@ -55,20 +51,28 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const email = emailInput.value.trim();
         const password = passwordInput.value.trim();
         const confirmPassword = confirmPasswordInput.value.trim();
 
         if (password !== confirmPassword) {
-            // Remove o alerta para uma senha não correspondente
             alert('As senhas não correspondem.');
             return;
         }
 
-        // Redireciona para a página filmes.html após o envio bem-sucedido
         window.location.href = 'filmes.html';
     });
 
     // Inicializa o estado do botão ao carregar a página
     validateForm();
+
+    // Adiciona funcionalidade ao ícone de olho
+    document.querySelectorAll('.toggle-password').forEach(icon => {
+        icon.addEventListener('click', () => {
+            const inputId = icon.getAttribute('data-input-id');
+            const input = document.getElementById(inputId);
+            const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+            input.setAttribute('type', type);
+            icon.textContent = type === 'password' ? '👁️' : '🙈'; // Atualiza o ícone
+        });
+    });
 });
