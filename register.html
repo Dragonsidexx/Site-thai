@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Netflix</title>
     <link rel="stylesheet" href="register.css">
-     <link rel="icon" href="netflix.jpeg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -17,15 +15,15 @@
                 <input type="email" id="email" name="email" required>
 
                 <label for="password">Senha, mínimo 8 caracteres:</label>
-                <div class="password-container">
+                <div class="input-container">
                     <input type="password" id="password" name="password" required>
-                    <i class="fas fa-eye" id="toggle-password" onclick="togglePasswordVisibility('password')"></i>
+                    <span class="toggle-password" data-input-id="password">👁️</span>
                 </div>
 
                 <label for="confirm-password">Confirme a Senha:</label>
-                <div class="password-container">
+                <div class="input-container">
                     <input type="password" id="confirm-password" name="confirm-password" required>
-                    <i class="fas fa-eye" id="toggle-confirm-password" onclick="togglePasswordVisibility('confirm-password')"></i>
+                    <span class="toggle-password" data-input-id="confirm-password">👁️</span>
                 </div>
 
                 <button type="submit">Registrar</button>
@@ -36,18 +34,5 @@
         </div>
     </div>
     <script src="register.js"></script>
-    <script>
-        function togglePasswordVisibility(id) {
-            const passwordInput = document.getElementById(id);
-            const eyeIcon = document.getElementById(`toggle-${id}`);
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                eyeIcon.classList.replace('fa-eye', 'fa-eye-slash');
-            } else {
-                passwordInput.type = 'password';
-                eyeIcon.classList.replace('fa-eye-slash', 'fa-eye');
-            }
-        }
-    </script>
 </body>
 </html>
