@@ -47,20 +47,6 @@ input {
     width: calc(100% - 30px); /* Ajuste para deixar espaço para o ícone */
 }
 
-.password-container {
-    position: relative;
-    margin-bottom: 15px;
-}
-
-.password-container i {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #fff;
-}
-
 input.valid {
     border-color: green;
     background-color: #d4edda; /* Fundo verde claro quando válido */
