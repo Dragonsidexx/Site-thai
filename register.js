@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitButton = form.querySelector('button');
 
     function updateFieldStyles() {
-        // Atualiza o estilo de todos os campos de entrada
         updateInputStyle(emailInput, validateEmail(emailInput.value));
         updateInputStyle(passwordInput, passwordInput.value.trim().length >= 8);
         updateInputStyle(confirmPasswordInput, confirmPasswordInput.value.trim() === passwordInput.value.trim());
