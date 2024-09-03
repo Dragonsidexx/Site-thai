@@ -108,13 +108,14 @@ body {
 }
 
 .signup-now a {
-    color: blue;
+    color: #e50914; /* Cor vermelha característica da Netflix */
     text-decoration: none;
     font-weight: 700;
 }
 
 .signup-now a:hover {
     text-decoration: underline;
+    color: #f40612; /* Cor ligeiramente mais clara ao passar o mouse */
 }
 
 .captcha-info {
