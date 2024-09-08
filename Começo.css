@@ -1,0 +1,217 @@
+body {
+    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
+    background-color: black; /* Cor de fundo da página */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 100vh; /* Preenche a altura total da viewport */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+  }   
+  
+  
+  .h1{
+    text-align: center;
+    height: 50px;
+    background-color: #222831;
+    color: red;
+    align-items: center;
+  
+  }
+  
+  
+  .paginicial{
+    color: red;
+    background-color: #061224;
+    text-align: center;
+  }
+  
+  
+  /* Estiliza cada item de resultado */
+  .item-resultado {
+    background: #FFFFFF; /* Cor de fundo dos itens */
+    border-radius: 0.6rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center;
+  }
+  
+  .item-resultado h2 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #222831; /* Cor do texto */
+  }
+  
+  /* Estiliza os links dentro dos itens de resultado */
+  .item-resultado a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #30475E; /* Cor do texto dos links */
+  }
+  
+  /* Estiliza os links quando são passados o mouse sobre */
+  .item-resultado a:hover {
+    text-decoration: none;
+    color: blue; /* Adiciona sublinhado ao passar o mouse */
+  }
+  
+  
+  .resultados-pesquisa {
+    height: 80vh; /* 80% da altura da viewport */
+    @media (max-width: 768px) {
+      height: 60vh;
+    }
+  }
+  
+  footer {
+    background-color: #45474B; /* Cor de fundo do rodapé */
+    color: greenyellow;
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 0; /* Espaçamento interno */
+    width: 100%; /* Largura total da página */
+    position: fixed; /* Posiciona o rodapé */
+    bottom: 0; /* Alinha ao fundo da página */
+    font-size: 1rem; /* Tamanho da fonte */
+  }
+  
+  .item-resultadoo{
+    background: #FFFFFF; /* Cor de fundo dos itens */
+    border-radius: 0.6rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center;
+    align-items: end;
+  
+  }
+  
+  .resultados-pesquisaa{
+    height: 80vh; /* 80% da altura da viewport */
+    align-items: end;
+  } 
+  
+  .botão{
+    color: red;
+    background-color: black;
+    border-radius: 15px;
+    width: 50px;
+    height: 35px;
+    
+    }
+  
+  .botão:hover{
+    background-color: rebeccapurple;
+    border-color: blue; 
+  }
+  
+  #btn-opcoes {
+    background-color: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .modal {
+    display: none; /* Esconder o modal por padrão */
+    position: fixed; /* Fixar o modal na tela */
+    z-index: 1; /* Colocar o modal acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilitar rolagem se o conteúdo for muito grande */
+    background-color: black; /* Fundo escurecido */
+    color: white;
+  }
+  
+  .modal-content {
+    background-color: black; /* Fundo escurecido */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: black; /* Fundo escurecido */
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: black; /* Fundo escurecido */
+  }
+  
+  .bit{
+    background-color: #222831;
+    color: red;
+  }
+  
+  .p{
+   color: red;
+  }
+  
+  #btn-opcoes {
+    background-color: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .modal {
+    display: none; /* Esconder o modal por padrão */
+    position: fixed; /* Fixar o modal na tela */
+    z-index: 1; /* Colocar o modal acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilitar rolagem se o conteúdo for muito grande */
+    background-color: black; /* Fundo escurecido */
+    color: white;
+  }
+  
+  .modal-content {
+    background-color: black; /* Fundo escurecido */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: black; /* Fundo escurecido */
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: black; /* Fundo escurecido */
+  }
+  
+  .h2{
+    background-color: #061224;
+    color: red;
+  }

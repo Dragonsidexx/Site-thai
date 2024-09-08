@@ -1,0 +1,426 @@
+.Texto {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: black; /* Adicionando cor de texto para manter a legibilidade */
+}
+
+.Voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 9px #999;
+    margin-top: 20px;
+}
+
+.Voltar:hover {
+    background-color: blue;
+}
+
+.Vou {
+    color: royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Desde {
+    margin: 20px;
+    padding: 10px;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+button#Enviar {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 6px;
+}
+
+button#Enviar:hover {
+    background-color: blue;
+}
+
+button#Enviar:active {
+    background-color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+button#Enviar.clicked {
+    background-color: green; /* Cor do botão após ser clicado */
+}
+
+#responseContainer {
+    display: none;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Adiciona margem acima e abaixo do vídeo */
+}
+
+.video-container video {
+    width: 700px; /* Define a largura do vídeo */
+    height: 500px; /* Define a altura do vídeo, igual à largura para torná-lo quadrado */
+    object-fit: cover; /* Cobre o conteúdo para garantir que o vídeo se ajuste ao contêiner */
+}
+
+#customAlert {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    color: black;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#enable-button {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Ajusta o padding */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+#enable-button:hover {
+    background-color: #444; /* Cor de fundo quando o botão é hovered */
+}
+
+.Agora {
+    color: red;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.disabled {
+    color: #818181;
+    pointer-events: none;
+}
+
+.enabled {
+    color: #f1f1f1;
+    pointer-events: auto;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.Então {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: black; /* Adicionando cor de texto para manter a legibilidade */
+}
+
+body {
+    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
+    background-color: black; /* Cor de fundo da página */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 100vh; /* Preenche a altura total da viewport */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+  }   
+  
+  
+  .h1{
+    text-align: center;
+    height: 50px;
+  
+  }
+  
+  
+  .paginicial{
+    color: red;
+    background-color: #061224;
+    text-align: center;
+  }
+  
+  
+  /* Estiliza cada item de resultado */
+  .item-resultado {
+    background: #FFFFFF; /* Cor de fundo dos itens */
+    border-radius: 0.6rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center;
+  }
+  
+  .item-resultado h2 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #222831; /* Cor do texto */
+  }
+  
+  /* Estiliza os links dentro dos itens de resultado */
+  .item-resultado a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #30475E; /* Cor do texto dos links */
+  }
+  
+  /* Estiliza os links quando são passados o mouse sobre */
+  .item-resultado a:hover {
+    text-decoration: none;
+    color: blue; /* Adiciona sublinhado ao passar o mouse */
+  }
+  
+  
+  .resultados-pesquisa {
+    height: 80vh; /* 80% da altura da viewport */
+    @media (max-width: 768px) {
+      height: 60vh;
+    }
+  }
+  
+  footer {
+    background-color: #45474B; /* Cor de fundo do rodapé */
+    color: greenyellow;
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 0; /* Espaçamento interno */
+    width: 100%; /* Largura total da página */
+    position: fixed; /* Posiciona o rodapé */
+    bottom: 0; /* Alinha ao fundo da página */
+    font-size: 1rem; /* Tamanho da fonte */
+  }
+  
+  .item-resultadoo{
+    background: #FFFFFF; /* Cor de fundo dos itens */
+    border-radius: 0.6rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center;
+    align-items: end;
+  
+  }
+  
+  .resultados-pesquisaa{
+    height: 80vh; /* 80% da altura da viewport */
+    align-items: end;
+  } 
+  
+  .botão{
+    color: red;
+    background-color: black;
+    border-radius: 15px;
+    width: 50px;
+    height: 35px;
+    
+    }
+  
+  .botão:hover{
+    background-color: rebeccapurple;
+    border-color: blue; 
+  }
+  
+  #btn-opcoes {
+    background-color: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .modal {
+    display: none; /* Esconder o modal por padrão */
+    position: fixed; /* Fixar o modal na tela */
+    z-index: 1; /* Colocar o modal acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilitar rolagem se o conteúdo for muito grande */
+    background-color: black; /* Fundo escurecido */
+    color: white;
+  }
+  
+  .modal-content {
+    background-color: black; /* Fundo escurecido */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: black; /* Fundo escurecido */
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: black; /* Fundo escurecido */
+  }
+  
+  .bit{
+    background-color: #222831;
+    color: red;
+  }
+  
+  .p{
+   color: red;
+  }
+  
+  #btn-opcoes {
+    background-color: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .modal {
+    display: none; /* Esconder o modal por padrão */
+    position: fixed; /* Fixar o modal na tela */
+    z-index: 1; /* Colocar o modal acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilitar rolagem se o conteúdo for muito grande */
+    background-color: black; /* Fundo escurecido */
+    color: white;
+  }
+  
+  .modal-content {
+    background-color: black; /* Fundo escurecido */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: black; /* Fundo escurecido */
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: black; /* Fundo escurecido */
+  }
+  
+  .h2{
+    background-color: #061224;
+    color: red;
+  }
