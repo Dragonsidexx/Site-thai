@@ -34,7 +34,7 @@ window.onload = function() {
         if (answer.trim() !== '') {
             questionAnswered = true;
             // Exibir a mensagem após responder a pergunta
-            showModal('Feche os olhos e conte até 15');
+            showModal('Feche os olhos');
             // Ocultar a resposta e o container de resposta
             document.getElementById('response').textContent = '';
             document.getElementById('responseContainer').style.display = 'none';
